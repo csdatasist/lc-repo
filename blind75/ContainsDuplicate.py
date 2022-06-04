@@ -21,7 +21,8 @@ class ContainsDuplicate:
                 
         return False
 
-    # hashset
+
+    # hashset - store seen numbers in a set, check if number has been seen before
     # time: O(n) - stores nums in set, 1 pass thur
     # space: O(n) - set can hold up to n values
     def solution2(self, nums):
@@ -32,3 +33,10 @@ class ContainsDuplicate:
             seen.add(n)
         
         return False
+
+
+    # sorting - sort then check neighbors for repeats
+    # time: O(nlogn)
+    # space: O(1)
+    def solution3():
+        pass
