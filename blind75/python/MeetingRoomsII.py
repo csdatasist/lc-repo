@@ -1,10 +1,11 @@
-class LC:
+class MeetingRoomsII:
     """
     Desc:
         # 253
         Given an array of meeting time intervals intervals where intervals[i] = [starti, endi], return the minimum number of conference rooms required.
     Link: 
         https://leetcode.com/problems/meeting-rooms-ii/
+        https://www.lintcode.com/problem/919/
     Notes:
     """
 
