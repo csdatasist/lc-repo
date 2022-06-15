@@ -1,4 +1,4 @@
-class LC:
+class FindPath:
     """
     Desc:
         # 1971
@@ -35,7 +35,7 @@ class LC:
     # iterative
     # Time: O(v+e)
     # Space: O(v)
-    def solution2(elf, n, edges, source, destination):
+    def solution2(self, n, edges, source, destination):
         # create adj list
         adj = { i:[] for i in range(n) }
         for u, v in edges: 
