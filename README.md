@@ -4,4 +4,4 @@ Repo for leetcode solutions
 
 ## Progress
 
-Blind 75 - 37 out of 75
+Blind 75 - 38 out of 75
