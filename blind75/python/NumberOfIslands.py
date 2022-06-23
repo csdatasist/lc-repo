@@ -43,8 +43,30 @@ class NumberOfIslands:
         return res 
 
 
-    # name
-    # Time: O()
-    # Space: O()
-    def solution2():
-        pass
+    # recursive, dfs
+    # Time: O(r * c)
+    # Space: O(r * c)
+    def numIslands(self, grid):
+        
+        islands = 0
+        visited = set()
+        
+        # create traversal algo 
+        def traverse(r, c):
+            if (r, c) in visited: return 0
+            if grid[r][c] == '0': return 0
+            
+            visited.add((r, c))
+            directions = [(0, 1), (0, -1), (1, 0), (-1, 0)]
+            for dr, dc in directions:
+                nR, nC = dr + r, dc + c 
+                if nR in range(len(grid)) and nC in range(len(grid[nR])):
+                    traverse(nR, nC)
+            return 1
+        
+        # traverse grid
+        for r in range(len(grid)):
+            for c in range(len(grid[r])):
+                islands += traverse(r, c)
+        
+        return islands
