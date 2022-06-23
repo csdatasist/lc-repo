@@ -6,6 +6,7 @@ class FindPath:
     Link: 
         https://leetcode.com/problems/find-if-path-exists-in-graph/
     Notes:
+        Type: Graph Problem 
     """
 
     # recursive
