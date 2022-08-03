@@ -51,6 +51,35 @@ class Trie:
             cur = cur.children[c]
         return True
 
+# same as above without extra trie class
+class SimpleTrie:    
+    def __init__(self):
+        self.trie = {}    
+
+    def insert(self, word: str) -> None:
+        curr = self.trie
+        for ch in word:
+            if ch not in curr:
+                curr[ch] = {}
+            curr = curr[ch]
+        curr['!'] = True # sign end of word 
+            
+    def search(self, word: str) -> bool:
+        curr = self.trie 
+        for ch in word:
+            if ch not in curr:
+                return False
+            curr = curr[ch]
+        return '!' in curr
+
+    def startsWith(self, prefix: str) -> bool:
+        curr = self.trie
+        for ch in prefix:
+            if ch not in curr:
+                return False
+            curr = curr[ch]
+        return True
+
 
 # Time: O(n) - number of words  
 # Space: O(n) - number of words
